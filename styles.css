@@ -87,6 +87,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -101,17 +102,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -119,9 +124,53 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 /*END MEYERS RESET*/
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+#left-side {
+  flex: 1 1 auto;
+  background: url('./images//plants.jpg');
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+
+
+.logo-container {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 68px;
+  position: absolute;
+  top: 25%;
+  width: 100%;
+}
+
+.logo-container img {
+  height: 100px;
+}
+
+
+.img-attribution {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-attribution a {
+  color: #fff;
+}
 
