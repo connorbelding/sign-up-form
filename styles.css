@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap');
+
 
 /*START MEYERS RESET*/
 html,
@@ -133,12 +135,20 @@ table {
 }
 
 /*END MEYERS RESET*/
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
   min-height: 100vh;
 }
 
+em {
+  font-style: italic;
+}
+
+/*START LEFT SIDE*/
 #left-side {
   flex: 1 1 auto;
   background: url('./images//plants.jpg');
@@ -150,7 +160,7 @@ body {
 
 .logo-container {
   background: rgba(0, 0, 0, 0.45);
-  padding: 16px 0;
+  padding: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +168,7 @@ body {
   top: 25%;
   width: 100%;
   font-family: 'Amatic SC', Helvetica, sans-serif;
-  font-size: 84px;
+  font-size: 5.2rem;
   letter-spacing: 1.2px;
 }
 
@@ -169,11 +179,95 @@ body {
 
 .img-attribution {
   position: absolute;
-  bottom: 16px;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  font-size: 0.95rem;
 }
 
 .img-attribution a {
   color: #fff;
 }
+
+/*END LEFT SIDE*/
+
+/*START RIGHT SIDE*/
+#right-side {
+  flex: 0 0 1100px;
+  font-family: 'Roboto', Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#right-side h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+}
+
+.form-heading {
+  max-width: 850px;
+  border: 1px solid red;
+  padding: 0 2.5rem;
+}
+
+.form-heading>h3:nth-child(3) {
+  margin: 1.5rem 0 0 0;
+}
+
+.form-container {
+  width: 100%;
+  margin: 2.5rem 0 0 0;
+  padding: 1.5rem 0 1.5rem 2.5rem;
+  background: #ddd;
+  border: 1px solid black;
+}
+
+form {
+  margin: 1.5rem 0 0 0;
+  border: 1px solid red;
+  width: fit-content;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 300px 300px;
+  column-gap: 4.7rem;
+  row-gap: 1.5rem;
+}
+
+form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 0.75rem;
+  letter-spacing: 0.07rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+form input {
+  width: 100%;
+}
+
+
+.form-footer {
+  margin: 2rem 0 0 0;
+  padding: 0 0 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-footer button {
+  width: fit-content;
+  color: #fff;
+  background: rgb(72, 107, 61);
+  font-size: 1.05rem;
+  padding: 0.8rem 2.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/*END RIGHT SIDE*/
