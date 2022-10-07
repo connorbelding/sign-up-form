@@ -166,12 +166,12 @@ em {
   top: 25%;
   width: 100%;
   font-family: "Amatic SC", Helvetica, sans-serif;
-  font-size: 5.4rem;
+  font-size: 6rem;
   letter-spacing: 1.2px;
 }
 
 .logo-container img {
-  height: 116px;
+  height: 132px;
 }
 
 .img-attribution {
@@ -190,7 +190,7 @@ em {
 
 /*START RIGHT SIDE*/
 #right-side {
-  flex: 0 0 1100px;
+  flex: 0 0 min(50%, 1100px);
   font-family: "Roboto", Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -209,13 +209,13 @@ em {
   padding: 0 2.5rem;
 }
 
-.form-heading > h3:nth-child(3) {
+.form-heading>h3:nth-child(3) {
   margin: 1.5rem 0 0 0;
 }
 
 .form-container {
   width: 100%;
-  margin: 2.5rem 0 0 0;
+  margin: 3.5rem 0 0 0;
   padding: 1.5rem 0 1.5rem 2.5rem;
   background: #fff;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.199);
@@ -231,7 +231,7 @@ form {
   row-gap: 1.5rem;
 }
 
-form > div {
+form>div {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -260,7 +260,7 @@ form input:focus-visible {
 }
 
 .form-footer {
-  margin: 2rem 0 0 0;
+  margin: 3rem 0 0 0;
   padding: 0 0 0 2.5rem;
   display: flex;
   flex-direction: column;
@@ -270,7 +270,7 @@ form input:focus-visible {
 .form-footer button {
   width: fit-content;
   color: #fff;
-  background: #596d48;
+  background: #33674d;
   font-size: 1.05rem;
   padding: 0.8rem 2.5rem;
   font-weight: bold;
@@ -279,9 +279,13 @@ form input:focus-visible {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.19);
 }
 
+.form-footer button:hover {
+  filter: brightness(1.1);
+}
+
 .form-footer a {
   text-decoration: none;
-  color: #596d48;
+  color: #33674d;
   font-weight: 700;
 }
 
