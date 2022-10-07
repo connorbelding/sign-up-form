@@ -37,35 +37,35 @@
     </div>
     <div class="form-container">
       <h3>Let's do this!</h3>
-      <form>
-        <div>
-          <label>first name</label>
-          <input />
-        </div>
-        <div>
-          <label>last name</label>
-          <input />
-        </div>
-        <div>
-          <label>email</label>
-          <input />
-        </div>
-        <div>
-          <label>phone number</label>
-          <input />
-        </div>
-        <div>
-          <label>password</label>
-          <input />
-        </div>
-        <div>
-          <label>confirm password</label>
-          <input />
-        </div>
+      <form id="sign-up-form">
+        <fieldset>
+          <label for="firstName">first name</label>
+          <input required id="firstName" name="firstName" type="text" minLength='2' maxLength='30' />
+        </fieldset>
+        <fieldset>
+          <label for="lastName">last name</label>
+          <input required id="lastName" name="lastName" type="text" minLength='2' maxLength='30' />
+        </fieldset>
+        <fieldset>
+          <label for="email">email</label>
+          <input required id="email" name="email" type="email" />
+        </fieldset>
+        <fieldset>
+          <label for="phoneNumber">phone number</label>
+          <input required id="phoneNumber" name="phoneNumber" type='tel' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' />
+        </fieldset>
+        <fieldset>
+          <label for="password">password</label>
+          <input required id="password" name="password" type='password' minLength='5' maxLength='20' />
+        </fieldset>
+        <fieldset>
+          <label for="passwordConfirm">confirm password</label>
+          <input required id="passwordConfirm" name="passwordConfirm" type='password' minLength='5' maxLength='20' />
+        </fieldset>
       </form>
     </div>
     <div class="form-footer">
-      <button type="submit">Create Account</button>
+      <button type="submit" form="sign-up-form">Create Account</button>
       <div class="login-container">
         Already have an account? <a href="#">Log in</a>
       </div>

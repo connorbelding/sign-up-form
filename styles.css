@@ -231,20 +231,30 @@ form {
   row-gap: 1.5rem;
 }
 
-form>div {
+fieldset {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  position: relative;
 }
 
-form label {
+fieldset.error[data-blurred='true']::after {
+  content: '* Invalid field';
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  left: 0;
+  color: rgb(243, 43, 43);
+  font-size: 12px;
+}
+
+fieldset label {
   font-size: 0.75rem;
   letter-spacing: 0.07rem;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-form input {
+fieldset input {
   width: 100%;
   padding: 0.3rem 0.5rem;
   font-size: 16px;
@@ -252,11 +262,28 @@ form input {
   border: 2px solid rgba(0, 0, 0, 0.07);
 }
 
-form input:focus-visible {
+fieldset.error[data-blurred='true'] input:invalid {
+  border: 2px solid rgb(243, 43, 43);
+}
+
+fieldset input:focus-visible {
   border: 2px solid rgb(38, 110, 219);
   outline: none;
   transform: scale(1.02);
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.19);
+}
+
+fieldset[data-passwords-match='false'][data-blurred='true'] input {
+  border: 2px solid rgb(243, 43, 43);
+}
+
+fieldset[data-passwords-match='false'][data-blurred='true']::after {
+  content: '* Passwords don\'t match';
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  left: 0;
+  color: rgb(243, 43, 43);
+  font-size: 12px;
 }
 
 .form-footer {
