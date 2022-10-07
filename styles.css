@@ -1,6 +1,5 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');*/
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Roboto:ital,wght@0,400;0,500;1,500&display=swap");
 
 /*START MEYERS RESET*/
 html,
@@ -151,12 +150,11 @@ em {
 /*START LEFT SIDE*/
 #left-side {
   flex: 1 1 auto;
-  background: url('./images//plants.jpg');
+  background: url("./images//plants.jpg");
   background-size: cover;
   color: #fff;
   position: relative;
 }
-
 
 .logo-container {
   background: rgba(0, 0, 0, 0.45);
@@ -167,15 +165,14 @@ em {
   position: absolute;
   top: 25%;
   width: 100%;
-  font-family: 'Amatic SC', Helvetica, sans-serif;
-  font-size: 5.2rem;
+  font-family: "Amatic SC", Helvetica, sans-serif;
+  font-size: 5.4rem;
   letter-spacing: 1.2px;
 }
 
 .logo-container img {
-  height: 100px;
+  height: 116px;
 }
-
 
 .img-attribution {
   position: absolute;
@@ -194,10 +191,11 @@ em {
 /*START RIGHT SIDE*/
 #right-side {
   flex: 0 0 1100px;
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background: #f9fafb;
 }
 
 #right-side h3 {
@@ -208,11 +206,10 @@ em {
 
 .form-heading {
   max-width: 850px;
-  border: 1px solid red;
   padding: 0 2.5rem;
 }
 
-.form-heading>h3:nth-child(3) {
+.form-heading > h3:nth-child(3) {
   margin: 1.5rem 0 0 0;
 }
 
@@ -220,13 +217,12 @@ em {
   width: 100%;
   margin: 2.5rem 0 0 0;
   padding: 1.5rem 0 1.5rem 2.5rem;
-  background: #ddd;
-  border: 1px solid black;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.199);
 }
 
 form {
   margin: 1.5rem 0 0 0;
-  border: 1px solid red;
   width: fit-content;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -235,9 +231,10 @@ form {
   row-gap: 1.5rem;
 }
 
-form>div {
+form > div {
   display: flex;
   flex-direction: column;
+  gap: 3px;
 }
 
 form label {
@@ -249,8 +246,18 @@ form label {
 
 form input {
   width: 100%;
+  padding: 0.3rem 0.5rem;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.07);
 }
 
+form input:focus-visible {
+  border: 2px solid rgb(38, 110, 219);
+  outline: none;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.19);
+}
 
 .form-footer {
   margin: 2rem 0 0 0;
@@ -263,11 +270,19 @@ form input {
 .form-footer button {
   width: fit-content;
   color: #fff;
-  background: rgb(72, 107, 61);
+  background: #596d48;
   font-size: 1.05rem;
   padding: 0.8rem 2.5rem;
   font-weight: bold;
   border-radius: 8px;
+  border: none;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.19);
+}
+
+.form-footer a {
+  text-decoration: none;
+  color: #596d48;
+  font-weight: 700;
 }
 
 /*END RIGHT SIDE*/
